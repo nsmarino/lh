@@ -80,7 +80,7 @@
             mobile_layout: section.settings.mobile_thumbnails,
             loop: section.settings.enable_video_looping,
             modal_id: section.id,
-            xr_button: true,
+            xr_button: false,
             media_width: media_width,
             media_fit: section.settings.media_fit,
             constrain_to_viewport: section.settings.constrain_to_viewport,
@@ -128,11 +128,11 @@
           name="previous"
           aria-label="{{ 'general.slider.previous_slide' | t }}"
         >
-          {% render 'icon-caret' %}
+        ←
         </button>
         <div class="slider-counter caption">
           <span class="slider-counter--current">1</span>
-          <span aria-hidden="true"> / </span>
+          <span aria-hidden="true">&nbsp;/&nbsp;</span>
           <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
           <span class="slider-counter--total">{{ media_count }}</span>
         </div>
@@ -141,26 +141,15 @@
           class="slider-button slider-button--next"
           name="next"
           aria-label="{{ 'general.slider.next_slide' | t }}"
-        >
-          {% render 'icon-caret' %}
+        >→
         </button>
       </div>
     {%- endunless -%}
   </slider-component>
-  {%- if first_3d_model -%}
-    <button
-      class="button button--full-width product__xr-button"
-      type="button"
-      aria-label="{{ 'products.product.xr_button_label' | t }}"
-      data-shopify-xr
-      data-shopify-model3d-id="{{ first_3d_model.id }}"
-      data-shopify-title="{{ product.title | escape }}"
-      data-shopify-xr-hidden
-    >
-      {% render 'icon-3d-model' %}
-      {{ 'products.product.xr_button' | t }}
-    </button>
-  {%- endif -%}
+
+
+
+  {% comment %} DK THUMBS {% endcomment %}
   {%- if media_count > 1
     and section.settings.gallery_layout contains 'thumbnail'
     or section.settings.mobile_thumbnails == 'show'
@@ -297,4 +286,5 @@
       </button>
     </slider-component>
   {%- endif -%}
+
 </media-gallery>

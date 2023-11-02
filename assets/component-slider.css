@@ -326,7 +326,7 @@ slider-component.slider-component-full-width {
 .slider-buttons {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 @media screen and (min-width: 990px) {
@@ -357,6 +357,8 @@ slider-component.slider-component-full-width {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Marfa-Mono';
+  font-weight: normal;
 }
 
 .slider-button:not([disabled]):hover {
