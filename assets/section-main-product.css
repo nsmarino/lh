@@ -2,9 +2,15 @@
   margin: 0;
 }
 
-.product.grid {
-  gap: 0;
+
+.product__title {
+  text-align: center;
+  word-break: break-word;
+  margin-bottom: 1.5rem;
+  margin: 0 3rem;
+
 }
+
 
 .product--no-media {
   max-width: 57rem;
@@ -46,9 +52,24 @@
   .product__media-container .slider-buttons {
     display: none;
   }
+  .product__title {
+    text-align: left;
+    word-break: break-word;
+    margin: 0 0 1.5rem;
+  }
 }
 
 @media screen and (min-width: 990px) {
+  .product {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+      ". img ."
+      "title img variants"
+      ". img buttons"
+      "thumbs img tabs"
+    ;
+  }
   .product--large:not(.product--no-media) .product__media-wrapper {
     max-width: 65%;
     width: calc(65% - var(--grid-desktop-horizontal-spacing) / 2);
@@ -174,6 +195,7 @@
 variant-radios,
 variant-selects {
   display: block;
+  width: 100%;
 }
 
 .product-form__input--dropdown {
@@ -371,15 +393,8 @@ a.product__text {
   text-transform: uppercase;
 }
 
-.product__title {
-  text-align: center;
-  word-break: break-word;
-  margin-bottom: 1.5rem;
-}
-
 .product__title > * {
   margin: 0;
-  padding: 0 3rem;
 }
 
 .product__title > a {
@@ -1063,7 +1078,7 @@ a.product__text {
 }
 
 /* Fix to show some space at the end of our sliders in all browsers to be applied on thumbnails */
-.slider--mobile.thumbnail-list:after {
+.slider--mobile.thumbnail-list:after, .slider--desktop.thumbnail-list:after {
   content: none;
 }
 
@@ -1101,6 +1116,9 @@ a.product__text {
     display: flex;
     align-items: center;
   }
+  .desktop-thumbnails-wrapper {
+    display: none;
+  }
 
   .product__modal-opener {
     width: 100%;
@@ -1124,6 +1142,10 @@ a.product__text {
 }
 
 @media screen and (min-width: 750px) {
+  .desktop-thumbnails-wrapper {
+    display: block;
+    width: 220px;
+  }
   .product--thumbnail_slider .thumbnail-slider {
     display: flex;
     align-items: center;

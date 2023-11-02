@@ -2,6 +2,7 @@ if (!customElements.get('media-gallery')) {
   customElements.define('media-gallery', class MediaGallery extends HTMLElement {
     constructor() {
       super();
+      console.log("Do not use media gallery")
       this.elements = {
         liveRegion: this.querySelector('[id^="GalleryStatus"]'),
         viewer: this.querySelector('[id^="GalleryViewer"]'),

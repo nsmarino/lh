@@ -2,6 +2,7 @@ slider-component {
   --desktop-margin-left-first-item: max(5rem, calc((100vw - var(--page-width) + 10rem - var(--grid-desktop-horizontal-spacing)) / 2));
   position: relative;
   display: block;
+  width: 100%;
 }
 
 slider-component.slider-component-full-width {
@@ -149,6 +150,8 @@ slider-component.slider-component-full-width {
     -webkit-overflow-scrolling: touch;
     margin-bottom: 1rem;
     scroll-padding-left: var(--desktop-margin-left-first-item);
+    gap: 0;
+    row-gap: 0;
   }
 
   /* Fix to show some space at the end of our sliders in all browsers */
@@ -160,13 +163,23 @@ slider-component.slider-component-full-width {
   }
 
   .slider.slider--desktop .slider__slide {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 0;
     padding-top: max(var(--focus-outline-padding), var(--shadow-padding-top));
     padding-bottom: max(var(--focus-outline-padding), var(--shadow-padding-bottom));
+    background: #EFF0F2;
+  }
+  .slider.slider--desktop .slider__slide img {
+    width: 66%;
   }
 
+
   .slider--desktop .slider__slide:first-child {
-    margin-left: var(--desktop-margin-left-first-item);
+    /* margin-left: var(--desktop-margin-left-first-item); */
     scroll-margin-left: var(--desktop-margin-left-first-item);
   }
 
