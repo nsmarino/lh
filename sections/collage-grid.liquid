@@ -4,13 +4,17 @@
         grid-template-rows: repeat(4, 25vw);
         grid-template-columns: repeat(4, minmax(0,1fr));
         width: 100vw;
+        overflow-x: hidden;
+        overflow-y: hidden;
     }
-    .collage-grid.margined {
-        width: calc(100vw - 1rem);
-        margin: 0 auto;
-        grid-template-rows: repeat(4, calc((100vw - 1rem) / 4));
+    .collage-grid a {
+        text-decoration: none;
     }
-    .collage-grid.offset-bottom, .collage-grid.margined.offset-bottom {
+    .collage-grid.auto-rows-mobile {
+        grid-template-rows: auto;
+    }
+
+    .collage-grid.offset-bottom {
         margin-bottom: -25vw;
     }
     .collage-grid img {
@@ -46,10 +50,25 @@
     .mobile-span-4 {
         width: 100vw;
     }
-    .margined .mobile-span-4 {
-        width: calc(100vw - 1rem);
-    }
 
+    .link-label {
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 115%;
+        letter-spacing: 0.14px;
+        text-transform: uppercase;
+        color: black;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+    }
+    .text-block {
+        padding: 0 1em;
+        text-transform: uppercase;
+        font-family: 'Marfa-Thin';
+        font-size: 1.6rem;
+        line-height: 110%;
+        letter-spacing: 1.5px;
+    }
     /* Mobile */
     @media screen and (max-width: 749px) {
 
@@ -57,19 +76,10 @@
 
     /* Desktop */
     @media screen and (min-width: 750px) {
-        .collage-grid {
-            display: grid;
-            grid-template-rows: repeat(8, 12.5vw);
-            grid-template-columns: repeat(8, minmax(0,1fr));
-            width: 100vw;
-        }
-        .collage-grid.margined {
-            width: calc(100vw - 2rem);
-            margin: 0 auto;
-            grid-template-rows: repeat(8, calc((100vw - 2rem) / 8));
-        }
-
         /* Unset all mobile classes: */
+        .collage-grid.auto-rows-mobile {
+            grid-template-rows: unset;
+        }
         .mobile-col-start-1, .mobile-col-start-2, .mobile-col-start-3 {
             grid-column-start: unset;
         }
@@ -81,6 +91,19 @@
         }
 
         /* Now apply desktop classes */
+        .collage-grid, .collage-grid.auto-rows-mobile {
+            display: grid;
+            grid-template-rows: repeat(8, 12.5vw);
+            grid-template-columns: repeat(8, minmax(0,1fr));
+            width: 100vw;
+        }
+
+        .collage-grid {
+            width: calc(100vw - 2rem);
+            margin: 0 auto;
+            grid-template-rows: repeat(8, calc((100vw - 2rem) / 8));
+        }
+
         .desktop-col-start-1 {
             grid-column-start: 1;
         }
@@ -148,7 +171,7 @@
     }
 {%- endstyle -%}
 
-<div class="collage-grid {% if section.settings.offset_bottom == true %} offset-bottom {% endif %} {% if section.settings.margin == true %} margined {% endif %}">
+<div class="collage-grid {% if section.settings.offset_bottom == true %} offset-bottom {% endif %} {% if section.settings.auto_rows_mobile == true %} auto-rows-mobile {% endif %}">
     {% for block in section.blocks %}
         <div style="transform: rotate({{ block.settings.rotation }}deg) scale({{ block.settings.scale }});" class="{{ block.settings.mobile_col_start }} {{ block.settings.mobile_row_start }} {{ block.settings.mobile_span }} {{ block.settings.desktop_col_start }} {{ block.settings.desktop_row_start }} {{ block.settings.desktop_span }}">
         {% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
@@ -156,10 +179,10 @@
                 <img src="{{ block.settings.image |  image_url  }}" alt="">
             {% endif %}
             {% if block.settings.link_label != blank %}
-                <p>{{ block.settings.link_label }}</p>
+                <p class="link-label">{{ block.settings.link_label }}</p>
             {% endif %}
             {% if block.settings.text != blank %}
-                <div>{{ block.settings.text }}</div>
+                <div class="text-block">{{ block.settings.text }}</div>
             {% endif %}
         {% if block.settings.link != blank %}</a>{% endif %}
         </div>
@@ -177,10 +200,10 @@
   "settings": [
     {
       "type": "checkbox",
-      "id": "margin",
+      "id": "auto_rows_mobile",
       "default": false,
-      "label": "Side Margins",
-      "info": "Toggle to use page margins"
+      "label": "Auto Rows Mobile",
+      "info": "Toggle to size row height to content on mobile"
     },
     {
       "type": "checkbox",
@@ -203,7 +226,7 @@
         {
           "type": "richtext",
           "id": "text",
-          "default": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+          "default": "<p>Collage grid item</p>",
           "label": "t:sections.multicolumn.blocks.column.settings.text.label"
         },
         {
@@ -321,35 +344,35 @@
             "id": "desktop_row_start",
             "options": [
                 {
-                "value": "desktop_row_start-1",
+                "value": "desktop-row-start-1",
                 "label": "1"
                 },
                 {
-                "value": "desktop_row_start-2",
+                "value": "desktop-row-start-2",
                 "label": "2"
                 },
                 {
-                "value": "desktop_row_start-3",
+                "value": "desktop-row-start-3",
                 "label": "3"
                 },
                 {
-                "value": "desktop_row_start-4",
+                "value": "desktop-row-start-4",
                 "label": "4"
                 },
                 {
-                "value": "desktop_row_start-5",
+                "value": "desktop-row-start-5",
                 "label": "5"
                 },
                 {
-                "value": "desktop_row_start-6",
+                "value": "desktop-row-start-6",
                 "label": "6"
                 },
                 {
-                "value": "desktop_row_start-7",
+                "value": "desktop-row-start-7",
                 "label": "7"
                 }
             ],
-            "default": "desktop_row_start-1",
+            "default": "desktop-row-start-1",
             "label": "Row Start (desktop)"
         },
         {
@@ -407,9 +430,9 @@
         {
             "type": "range",
             "id": "rotation",
-            "min": -90,
-            "max": 90,
-            "step": 5,
+            "min": -20,
+            "max": 20,
+            "step": 1,
             "default": 0,
             "unit": "deg",
             "label": "Rotation"
