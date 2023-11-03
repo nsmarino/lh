@@ -140,6 +140,7 @@
 
                   <tbody role="rowgroup">
                     {%- for item in cart.items -%}
+
                       <tr id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item" role="row">
                         <td class="cart-item__media" role="cell" headers="CartDrawer-ColumnProductImage">
                           {% if item.image %}
@@ -157,9 +158,6 @@
                         </td>
 
                         <td class="cart-item__details" role="cell" headers="CartDrawer-ColumnProduct">
-                          {%- if settings.show_vendor -%}
-                            <p class="caption-with-letter-spacing light">{{ item.product.vendor }}</p>
-                          {%- endif -%}
 
                           <a href="{{ item.url }}" class="cart-item__name h4 break">
                             {{- item.product.title | escape -}}
@@ -171,7 +169,7 @@
                                 {{ 'products.product.price.regular_price' | t }}
                               </span>
                               <s class="cart-item__old-price product-option">
-                                {{- item.original_price | money -}}
+                                {{- item.original_price | money_without_trailing_zeros -}}
                               </s>
                               <span class="visually-hidden">
                                 {{ 'products.product.price.sale_price' | t }}
@@ -182,7 +180,7 @@
                             </div>
                           {%- else -%}
                             <div class="product-option">
-                              {{ item.original_price | money }}
+                              {{ item.original_price | money_without_trailing_zeros }}
                             </div>
                           {%- endif -%}
 
@@ -277,7 +275,7 @@
                               </div>
                             {%- else -%}
                               <span class="price price--end">
-                                {{ item.original_line_price | money }}
+                                {{ item.original_line_price | money_without_trailing_zeros }}
                               </span>
                             {%- endif -%}
 
@@ -367,6 +365,7 @@
                           </div>
                         </td>
                       </tr>
+
                     {%- endfor -%}
                   </tbody>
                 </table>
@@ -407,7 +406,8 @@
 
         <div class="cart-drawer__footer" {{ block.shopify_attributes }}>
           <div class="totals" role="status">
-            <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}</h2>
+            <h2 class="totals__subtotal">Total:</h2>
+            <p class="totals__item-count"><span>{{ cart.item_count }}</span>Items</p>
             <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
           </div>
 
@@ -425,7 +425,7 @@
             {%- endif -%}
           </div>
 
-          <small class="tax-note caption-large rte">
+          {% comment %} <small class="tax-note caption-large rte">
             {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
               {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
             {%- elsif cart.taxes_included -%}
@@ -435,7 +435,7 @@
             {%- else -%}
               {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
             {%- endif -%}
-          </small>
+          </small> {% endcomment %}
         </div>
 
         <!-- CTAs -->
@@ -457,7 +457,7 @@
               disabled
             {% endif %}
           >
-            {{ 'sections.cart.checkout' | t }}
+            Check Out
           </button>
         </div>
       </div>

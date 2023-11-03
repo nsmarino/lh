@@ -68,7 +68,6 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
 }
 
 .drawer__heading {
@@ -111,6 +110,9 @@ cart-drawer:not(.is-empty) .cart-drawer__collection {
 
 cart-drawer-items.is-empty + .drawer__footer {
   display: none;
+}
+cart-drawer-items, cart-drawer-items thead {
+  border-bottom: 1px solid black;
 }
 
 .drawer__footer > details {
