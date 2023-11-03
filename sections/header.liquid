@@ -31,6 +31,9 @@
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 
 <style>
+  header {
+    background-color: white;
+  }
   header-drawer {
     justify-self: start;
     margin-left: -1.2rem;
@@ -166,7 +169,7 @@
         {%- endcase -%}
       {%- endfor -%}
 
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+      <span class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         <span>Cart</span>
 
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
@@ -176,7 +179,7 @@
             {%- endif -%}
             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
           </div>
-      </a>
+      </span>
     </div>
 
   </header>

@@ -23,40 +23,8 @@
       aria-label="{{ 'sections.cart.title' | t }}"
       tabindex="-1"
     >
-      {%- if cart == empty -%}
-        <div class="drawer__inner-empty">
-          <div class="cart-drawer__warnings center{% if settings.cart_drawer_collection != blank %} cart-drawer__warnings--has-collection{% endif %}">
-            <div class="cart-drawer__empty-content">
-              <h2 class="cart__empty-text">{{ 'sections.cart.empty' | t }}</h2>
-              <button
-                class="drawer__close"
-                type="button"
-                onclick="this.closest('cart-drawer').close()"
-                aria-label="{{ 'accessibility.close' | t }}"
-              >
-                {% render 'icon-close' %}
-              </button>
-              <a href="{{ routes.all_products_collection_url }}" class="button">
-                {{ 'general.continue_shopping' | t }}
-              </a>
-
-              {%- if shop.customer_accounts_enabled and customer == null -%}
-                <p class="cart__login-title h3">{{ 'sections.cart.login.title' | t }}</p>
-                <p class="cart__login-paragraph">
-                  {{ 'sections.cart.login.paragraph_html' | t: link: routes.account_login_url }}
-                </p>
-              {%- endif -%}
-            </div>
-          </div>
-          {%- if settings.cart_drawer_collection != blank -%}
-            <div class="cart-drawer__collection">
-              {% render 'card-collection', card_collection: settings.cart_drawer_collection, columns: 1 %}
-            </div>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
       <div class="drawer__header">
-        <h2 class="drawer__heading">{{ 'sections.cart.title' | t }}</h2>
+        <h2 class="drawer__heading">cart title</h2>
         <button
           class="drawer__close"
           type="button"
@@ -66,6 +34,63 @@
           {% render 'icon-close' %}
         </button>
       </div>
+
+      {%- if cart == empty -%}
+        <div class="drawer__inner-empty">
+          {% comment %} Cosmetic table header {% endcomment %}
+          <table class="cart-items" role="table">
+            <thead role="rowgroup">
+              <tr role="row">
+                <th id="CartDrawer-ColumnProductImage" role="columnheader">
+                  <span class="visually-hidden">{{ 'sections.cart.headings.image' | t }}</span>
+                </th>
+                <th
+                  id="CartDrawer-ColumnProduct"
+                  class="caption-with-letter-spacing"
+                  scope="col"
+                  role="columnheader"
+                >
+                  {{ 'sections.cart.headings.product' | t }}
+                </th>
+                <th
+                  id="CartDrawer-ColumnTotal"
+                  class="right caption-with-letter-spacing"
+                  scope="col"
+                  role="columnheader"
+                >
+                  {{ 'sections.cart.headings.total' | t }}
+                </th>
+                <th id="CartDrawer-ColumnQuantity" role="columnheader">
+                  <span class="visually-hidden">{{ 'sections.cart.headings.quantity' | t }}</span>
+                </th>
+              </tr>
+            </thead>
+          </table>  
+
+          <div class="cart-drawer__empty-content">
+            <div>
+              <h2 class="cart__empty-text">Your Cart</h2>
+              <a href="{{ routes.all_products_collection_url }}">Find Something To Add</a>
+            </div>
+            <div>
+              {{ settings.cart_drawer_image | image_url: width: 1200 | image_tag: loading: 'lazy' }}              
+            </div>
+
+            <div>
+              <h2 class="cart__empty-text">Is Empty</h2>
+              <a href="{{ routes.all_products_collection_url }}">Find Something To Add</a>
+            </div>
+            <footer>
+              <div>
+                <span>Total:</span>
+                <span>O Items</span>
+              </div>    
+              <a href="{{ routes.all_products_collection_url }}" class="button">Back to Shop</a>
+            </footer>
+          </div>
+        </div>
+      {%- endif -%}
+
       <cart-drawer-items
         {% if cart == empty %}
           class=" is-empty"
@@ -350,6 +375,7 @@
           <div id="CartDrawer-CartErrors" role="alert"></div>
         </form>
       </cart-drawer-items>
+
       <div class="drawer__footer">
         {%- if settings.show_cart_note -%}
           <details id="Details-CartDrawer">

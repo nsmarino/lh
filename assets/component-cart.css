@@ -7,7 +7,7 @@
 .is-empty .cart__contents,
 cart-items.is-empty .title-wrapper-with-link,
 .is-empty .cart__footer {
-  display: none;
+  /* display: none; */
 }
 
 .is-empty .cart__empty-text,
