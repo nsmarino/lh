@@ -24,7 +24,10 @@
       tabindex="-1"
     >
       <div class="drawer__header">
-        <h2 class="drawer__heading">cart title</h2>
+        <a href="/collections/all">Shop All</a>
+        <h2 class="drawer__heading">
+          {% render "logo" %}
+        </h2>
         <button
           class="drawer__close"
           type="button"
@@ -68,24 +71,26 @@
           </table>  
 
           <div class="cart-drawer__empty-content">
-            <div>
-              <h2 class="cart__empty-text">Your Cart</h2>
-              <a href="{{ routes.all_products_collection_url }}">Find Something To Add</a>
-            </div>
-            <div>
-              {{ settings.cart_drawer_image | image_url: width: 1200 | image_tag: loading: 'lazy' }}              
-            </div>
-
-            <div>
-              <h2 class="cart__empty-text">Is Empty</h2>
-              <a href="{{ routes.all_products_collection_url }}">Find Something To Add</a>
+            <div class="cart-drawer__empty-main">
+              <div>
+                <h2 class="cart__empty-text">Your Cart</h2>
+                <a href="{{ routes.all_products_collection_url }}" class="cart__empty-cta-1">Find Something To Add</a>
+              </div>
+              <div>
+                {{ settings.cart_drawer_image | image_url: width: 1200 | image_tag: loading: 'lazy' }}              
+              </div>
+  
+              <div>
+                <h2 class="cart__empty-text">Is Empty</h2>
+                <a href="{{ routes.all_products_collection_url }}" class="cart__empty-cta-2">Find Something To Add</a>
+              </div>
             </div>
             <footer>
-              <div>
+              <div class="cart__empty-total">
                 <span>Total:</span>
                 <span>O Items</span>
               </div>    
-              <a href="{{ routes.all_products_collection_url }}" class="button">Back to Shop</a>
+              <a href="{{ routes.all_products_collection_url }}" class="button button--cart-footer">Back to Shop</a>
             </footer>
           </div>
         </div>
