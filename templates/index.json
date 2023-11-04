@@ -3,9 +3,10 @@
     "f70b17b8-8471-461f-b4a7-5410721c4c17": {
       "type": "video",
       "settings": {
-        "heading": "Video",
+        "heading": "",
         "heading_size": "h1",
-        "enable_video_looping": false,
+        "enable_video_looping": true,
+        "video": "shopify:\/\/files\/videos\/showing-action-cycle.mp4",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
@@ -20,7 +21,6 @@
         "template--16875833884900__14c16e31-5809-4109-9aef-97af82afb034-card-1": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_3739_sam_hirsch_1.png",
             "text": "",
             "link_label": "",
             "link": "",
@@ -39,7 +39,6 @@
           "type": "card",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_6761_1.png",
             "text": "",
             "link_label": "",
             "link": "",
@@ -57,7 +56,6 @@
         "346f70a0-4e72-4cab-bff5-4eaf1c83ebc5": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Fugees_The_Score_25th_Anniversary_Long_Sleeve_-_Black.png",
             "text": "",
             "link_label": "Shop Tour Merch",
             "link": "shopify:\/\/collections\/all",
@@ -107,7 +105,6 @@
         "25f10286-d846-407a-8f39-7dcab6569cb1": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/IMG_3739_sam_hirsch_1.png",
             "text": "",
             "link_label": "",
             "link": "",
@@ -125,7 +122,6 @@
         "6f56345f-cd15-4b45-93cd-630d97ec0a60": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Fugees_The_Score_25th_Anniversary_Long_Sleeve_-_Black.png",
             "text": "",
             "link_label": "Shop Tour Merch",
             "link": "shopify:\/\/collections\/all",

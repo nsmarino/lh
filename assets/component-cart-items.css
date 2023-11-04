@@ -195,23 +195,10 @@ cart-remove-button .button:not([disabled]):hover {
     display: grid;
     grid-template: repeat(2, auto) / repeat(4, 1fr);
     gap: 1.5rem;
-    margin-bottom: 3.5rem;
   }
 
   .cart-item:last-child {
     margin-bottom: 0;
-  }
-
-  .cart-item__media {
-    grid-row: 1 / 3;
-  }
-
-  .cart-item__details {
-    grid-column: 2 / 4;
-  }
-
-  .cart-item__quantity {
-    grid-column: 2 / 5;
   }
 
   .cart-item__quantity-wrapper {

@@ -180,17 +180,23 @@ cart-items {
   display: block;
 }
 
-.cart__checkout-button {
-  max-width: 36rem;
-}
 
 .cart__ctas {
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-align: center;
 }
 
 @media screen and (min-width: 750px) {
   .cart-note {
     max-width: 35rem;
+  }
+  .cart__checkout-button {
+    max-width: 44rem;
+    background-color: black;
+    color: white;
+    height: 36px;
+    font-weight: bold;
   }
 
   .cart__update-button {
@@ -208,7 +214,10 @@ cart-items {
   }
 
   .cart__ctas {
+    border-top: 1px solid black;
     display: flex;
     gap: 1rem;
+    padding: 1rem 2rem 0;
+    justify-content: end;
   }
 }
