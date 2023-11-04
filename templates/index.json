@@ -6,7 +6,7 @@
         "heading": "",
         "heading_size": "h1",
         "enable_video_looping": true,
-        "video": "shopify:\/\/files\/videos\/showing-action-cycle.mp4",
+        "video": "shopify:\/\/files\/videos\/Juvee Hero Animation.mp4",
         "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
         "description": "",
         "full_width": false,
@@ -21,6 +21,7 @@
         "template--16875833884900__14c16e31-5809-4109-9aef-97af82afb034-card-1": {
           "type": "card",
           "settings": {
+            "image": "shopify:\/\/shop_images\/laurynhill-webbanner.webp",
             "text": "",
             "link_label": "",
             "link": "",
@@ -28,34 +29,17 @@
             "mobile_row_start": "mobile-row-start-1",
             "mobile_span": "mobile-span-4",
             "desktop_col_start": "desktop-col-start-4",
-            "desktop_row_start": "desktop-row-start-1",
+            "desktop_row_start": "desktop-row-start-2",
             "desktop_span": "desktop-span-5",
             "entrance-anim": "fly",
             "rotation": 0,
             "scale": 1
           }
         },
-        "template--16875833884900__14c16e31-5809-4109-9aef-97af82afb034-card-2": {
-          "type": "card",
-          "disabled": true,
-          "settings": {
-            "text": "",
-            "link_label": "",
-            "link": "",
-            "mobile_col_start": "mobile-col-start-2",
-            "mobile_row_start": "mobile-row-start-2",
-            "mobile_span": "mobile-span-2",
-            "desktop_col_start": "desktop-col-start-1",
-            "desktop_row_start": "desktop-row-start-2",
-            "desktop_span": "desktop-span-2",
-            "entrance-anim": "fly",
-            "rotation": 5,
-            "scale": 0.9
-          }
-        },
         "346f70a0-4e72-4cab-bff5-4eaf1c83ebc5": {
           "type": "card",
           "settings": {
+            "image": "shopify:\/\/shop_images\/6924YL.JP07_frt.png",
             "text": "",
             "link_label": "Shop Tour Merch",
             "link": "shopify:\/\/collections\/all",
@@ -63,7 +47,7 @@
             "mobile_row_start": "mobile-row-start-3",
             "mobile_span": "mobile-span-3",
             "desktop_col_start": "desktop-col-start-1",
-            "desktop_row_start": "desktop-row-start-5",
+            "desktop_row_start": "desktop-row-start-3",
             "desktop_span": "desktop-span-3",
             "entrance-anim": "fly",
             "rotation": -3,
@@ -73,7 +57,7 @@
         "5b7aab4f-04ed-44f8-a63b-b1ae0d92c6d0": {
           "type": "card",
           "settings": {
-            "text": "<p>It could all be so simple&nbsp;           But you'd rather     make it hard Loving you is like a   battle            And we both end up with scars Tell me,      who I have <\/p><p>to be?      To get some reciprocity See,     no one loves you more     than me  And            no one ever will<\/p>",
+            "text": "<p>It could all be so simple            But you'd rather     make it hard Loving you is like a   battle            And we both end up with scars Tell me,      who I have <\/p><p>to be?      To get some reciprocity See,     no one loves you more     than me  And            no one ever will<\/p>",
             "link_label": "",
             "link": "",
             "mobile_col_start": "mobile-col-start-1",
@@ -81,65 +65,103 @@
             "mobile_span": "mobile-span-4",
             "desktop_col_start": "desktop-col-start-2",
             "desktop_row_start": "desktop-row-start-1",
-            "desktop_span": "desktop-span-2",
-            "entrance-anim": "fly",
-            "rotation": 2,
-            "scale": 1
-          }
-        }
-      },
-      "block_order": [
-        "template--16875833884900__14c16e31-5809-4109-9aef-97af82afb034-card-1",
-        "template--16875833884900__14c16e31-5809-4109-9aef-97af82afb034-card-2",
-        "346f70a0-4e72-4cab-bff5-4eaf1c83ebc5",
-        "5b7aab4f-04ed-44f8-a63b-b1ae0d92c6d0"
-      ],
-      "settings": {
-        "auto_rows_mobile": true,
-        "offset_bottom": false
-      }
-    },
-    "8389d312-8c61-4e12-b1f9-f2117c5fdec6": {
-      "type": "collage-grid",
-      "blocks": {
-        "25f10286-d846-407a-8f39-7dcab6569cb1": {
-          "type": "card",
-          "settings": {
-            "text": "",
-            "link_label": "",
-            "link": "",
-            "mobile_col_start": "mobile-col-start-1",
-            "mobile_row_start": "mobile-row-start-2",
-            "mobile_span": "mobile-span-4",
-            "desktop_col_start": "desktop-col-start-6",
-            "desktop_row_start": "desktop-row-start-1",
             "desktop_span": "desktop-span-3",
             "entrance-anim": "fly",
             "rotation": 2,
             "scale": 1
           }
         },
-        "6f56345f-cd15-4b45-93cd-630d97ec0a60": {
+        "75126fa5-6a0e-4210-84c8-4ea297714266": {
           "type": "card",
           "settings": {
+            "image": "shopify:\/\/shop_images\/FUG-returnofthefugeesls-green-1200x1200-FRONTBACK.png",
             "text": "",
-            "link_label": "Shop Tour Merch",
-            "link": "shopify:\/\/collections\/all",
+            "link_label": "",
+            "link": "",
             "mobile_col_start": "mobile-col-start-1",
             "mobile_row_start": "mobile-row-start-1",
-            "mobile_span": "mobile-span-3",
-            "desktop_col_start": "desktop-col-start-5",
-            "desktop_row_start": "desktop-row-start-5",
-            "desktop_span": "desktop-span-4",
+            "mobile_span": "mobile-span-1",
+            "desktop_col_start": "desktop-col-start-4",
+            "desktop_row_start": "desktop-row-start-4",
+            "desktop_span": "desktop-span-5",
             "entrance-anim": "fly",
-            "rotation": -5,
+            "rotation": 0,
             "scale": 1
           }
         }
       },
       "block_order": [
-        "25f10286-d846-407a-8f39-7dcab6569cb1",
-        "6f56345f-cd15-4b45-93cd-630d97ec0a60"
+        "template--16875833884900__14c16e31-5809-4109-9aef-97af82afb034-card-1",
+        "346f70a0-4e72-4cab-bff5-4eaf1c83ebc5",
+        "5b7aab4f-04ed-44f8-a63b-b1ae0d92c6d0",
+        "75126fa5-6a0e-4210-84c8-4ea297714266"
+      ],
+      "settings": {
+        "auto_rows_mobile": true,
+        "offset_bottom": true
+      }
+    },
+    "c4f5504f-1cb2-4391-a8d8-cb8b1aae4aa1": {
+      "type": "collage-grid",
+      "blocks": {
+        "e98f9124-f19a-4d08-862e-c74ce8fbd88b": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/laurynhill-webbanner.webp",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-1",
+            "mobile_row_start": "mobile-row-start-1",
+            "mobile_span": "mobile-span-4",
+            "desktop_col_start": "desktop-col-start-4",
+            "desktop_row_start": "desktop-row-start-2",
+            "desktop_span": "desktop-span-5",
+            "entrance-anim": "fly",
+            "rotation": 0,
+            "scale": 1
+          }
+        },
+        "8a0c4d56-652b-4704-8ada-e64dfba08af5": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/6924YL.JP07_frt.png",
+            "text": "",
+            "link_label": "Shop Tour Merch",
+            "link": "shopify:\/\/collections\/all",
+            "mobile_col_start": "mobile-col-start-2",
+            "mobile_row_start": "mobile-row-start-3",
+            "mobile_span": "mobile-span-3",
+            "desktop_col_start": "desktop-col-start-1",
+            "desktop_row_start": "desktop-row-start-3",
+            "desktop_span": "desktop-span-3",
+            "entrance-anim": "fly",
+            "rotation": -3,
+            "scale": 1
+          }
+        },
+        "81b6a605-7160-45dc-b55c-1260a8512185": {
+          "type": "card",
+          "settings": {
+            "text": "<p>It could all be so simple            But you'd rather     make it hard Loving you is like a   battle            And we both end up with scars Tell me,      who I have <\/p><p>to be?      To get some reciprocity See,     no one loves you more     than me  And            no one ever will<\/p>",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-1",
+            "mobile_row_start": "mobile-row-start-2",
+            "mobile_span": "mobile-span-4",
+            "desktop_col_start": "desktop-col-start-1",
+            "desktop_row_start": "desktop-row-start-1",
+            "desktop_span": "desktop-span-3",
+            "entrance-anim": "fly",
+            "rotation": 2,
+            "scale": 1
+          }
+        }
+      },
+      "block_order": [
+        "e98f9124-f19a-4d08-862e-c74ce8fbd88b",
+        "8a0c4d56-652b-4704-8ada-e64dfba08af5",
+        "81b6a605-7160-45dc-b55c-1260a8512185"
       ],
       "settings": {
         "auto_rows_mobile": true,
@@ -150,6 +172,6 @@
   "order": [
     "f70b17b8-8471-461f-b4a7-5410721c4c17",
     "14c16e31-5809-4109-9aef-97af82afb034",
-    "8389d312-8c61-4e12-b1f9-f2117c5fdec6"
+    "c4f5504f-1cb2-4391-a8d8-cb8b1aae4aa1"
   ]
 }

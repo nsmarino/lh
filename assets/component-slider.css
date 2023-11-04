@@ -355,9 +355,6 @@ slider-component.slider-component-full-width {
 }
 
 @media screen and (min-width: 750px) {
-  .slider--mobile {
-    margin-bottom: 8.5rem;
-  }
   .slider--mobile + .slider-buttons {
     display: none;
   }
