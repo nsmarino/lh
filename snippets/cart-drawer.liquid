@@ -121,6 +121,7 @@
                           <a href="{{ item.url }}" class="cart-item__name break">
                             {{- item.product.title | escape -}}
                           </a>
+                          {{ item.price | money_without_trailing_zeros }}
                           {%- if item.product.has_only_default_variant == false or item.properties.size != 0 or item.selling_plan_allocation != null-%}
 
                             {% comment %} properties {% endcomment %}
@@ -264,6 +265,8 @@
                             </button>
                           </quantity-input>
                         </div>
+
+                        <div class="cart-item__dk-link"><a href="{{ item.url }}">Edit</a></div>
 
                         {% comment %} error msg {% endcomment %}
                         <div id="CartDrawer-LineItemError-{{ item.index | plus: 1 }}" class="cart-item__error" role="alert">

@@ -240,6 +240,7 @@ fieldset.product-form__input .form__label {
   position: relative;
 }
 
+
 .product-form__input input[type='radio'] + label:before {
   content: '';
   position: absolute;
@@ -442,6 +443,9 @@ a.product__text {
 @media screen and (min-width: 750px) {
   .product__info-container {
     max-width: 60rem;
+  }
+  .product-form__input input[type='radio'] + label {
+    border: 1px solid transparent;
   }
 
   .product__info-container .price--on-sale .price-item--regular {
@@ -1106,9 +1110,17 @@ a.product__text {
     line-height: 1.3rem;
   }
   .product-form__buttons button {
+    background: white;
+    color: black;
+    font-weight: bold;
+    transition: all var(--duration-short) ease;
+
+  }
+  .product-form__buttons button:hover {
     background: black;
     color: white;
     font-weight: bold;
+    transition: all 0.2s ease;
   }
   .thumbnail-list {
     display: grid;

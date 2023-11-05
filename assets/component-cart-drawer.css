@@ -256,6 +256,9 @@ cart-drawer-items.is-empty {
 .cart-drawer .cart-item__details a {
   color: black;
 }
+.cart-drawer .cart-item__dk-link {
+  display: none;
+}
 .cart-drawer .cart-item__option {
   grid-area: option;
   font-size: 14px;
@@ -537,6 +540,7 @@ cart-drawer-items.is-empty {
   .cart-drawer .cart-item {
     display: grid;
     grid-auto-columns: unset;
+    grid-auto-rows: 1fr;
     grid-template-columns: 4rem 18rem 1fr calc(50% - 18rem) 18rem;
     grid-template-areas:
       "remove img title qty total"
@@ -564,7 +568,20 @@ cart-drawer-items.is-empty {
   }
 
   .cart-drawer .cart-item__option {
-    margin-top: 0;
+    display: none;
+  }
+  .cart-drawer .cart-item__dk-link {
+    display: block;
+    grid-area: option;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    color: black;
+    font-weight: bold;
+  }
+  .cart-drawer .cart-item__dk-link a {
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 
   .cart-drawer .cart-item__totals {

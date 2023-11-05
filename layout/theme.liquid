@@ -318,6 +318,55 @@
         pauseSlideshow: `{{ 'sections.slideshow.pause_slideshow' | t }}`,
         playSlideshow: `{{ 'sections.slideshow.play_slideshow' | t }}`,
       };
+
+      const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
+        const { top, left, bottom, right } = el.getBoundingClientRect();
+        const { innerHeight, innerWidth } = window;
+        console.log(el)
+        return partiallyVisible
+          ? ((top > 0 && top < innerHeight) ||
+              (bottom > 0 && bottom < innerHeight)) &&
+              ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
+          : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
+      };
+
+      function scrollTrigger(selector, options = {}){
+          let els = document.querySelectorAll(selector)
+          els = Array.from(els)
+          els.forEach(el => {
+              if (elementIsVisibleInViewport(el, true)) console.log("In view")
+              addObserver(el, options)
+          })
+      }
+
+      function addObserver(el, options){
+          if(!('IntersectionObserver' in window)){
+              if(options.cb){
+                  options.cb(el)
+              }else{
+                  entry.target.classList.add('active')
+              }
+              return
+          }
+          let observer = new IntersectionObserver((entries, observer) => { //this takes a callback function which receives two arguments: the elemts list and the observer instance
+              entries.forEach(entry => {
+                  if(entry.isIntersecting){
+                      if(options.cb){
+                          options.cb(el)
+                      }else{
+                          console.log("entrance")
+                          entry.target.classList.add('active')
+                      }
+                      observer.unobserve(entry.target)
+                  }
+              })
+          }, options)
+          observer.observe(el)
+      }
+
+      scrollTrigger('[data-entrance]', {
+          rootMargin: '-100px',
+      })
     </script>
 
     {%- if settings.predictive_search_enabled -%}

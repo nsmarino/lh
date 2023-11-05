@@ -171,6 +171,7 @@
 }
 
 .card__heading {
+  font-family: "Marfa-Thin";
   text-align: center;
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -340,7 +341,8 @@
 }
 
 .card-information > .price {
-  color: rgb(var(--color-foreground));
+  color: black;
+  font-family: "Marfa-Thin";
 }
 
 .card--horizontal .card-information > .price {
@@ -357,4 +359,8 @@
 
 .card-article-info {
   margin-top: 1rem;
+}
+
+.card:hover .card__heading, .card:hover .card__information {
+  font-style: italic;
 }
