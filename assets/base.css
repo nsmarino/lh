@@ -1426,7 +1426,6 @@ button.shopify-payment-button__button--unbranded {
 }
 
 .button.loading {
-  color: transparent;
   position: relative;
 }
 

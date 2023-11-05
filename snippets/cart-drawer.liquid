@@ -41,7 +41,7 @@
 
       {%- if cart == empty -%}
         <div class="drawer__inner-empty">
-          <header class="cart-items-thead">
+          <header class="fake-cart-items-thead">
             <div>Item</div>
             <div class="dk-only-label">Product Details</div>
             <div class="dk-only-label">Quantity</div>
@@ -266,7 +266,7 @@
                           </quantity-input>
                         </div>
 
-                        <div class="cart-item__dk-link"><a href="{{ item.url }}">Edit</a></div>
+                        <div class="cart-item__dk-link"></div>
 
                         {% comment %} error msg {% endcomment %}
                         <div id="CartDrawer-LineItemError-{{ item.index | plus: 1 }}" class="cart-item__error" role="alert">
