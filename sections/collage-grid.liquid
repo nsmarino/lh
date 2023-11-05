@@ -10,24 +10,27 @@
     }
 
     [data-entrance="wipe"].active {
-        transition: 1s ease all;
+        transition: 0.8s ease all;
         transform: rotate(var(--rotate)) scale(var(--scale)) translateY(0px);
         opacity: 1;
     }
 
     [data-entrance="fly"].active {
-        transition: 1.8s ease all;
+        transition: 1.4s ease all;
         transform: rotate(var(--rotate)) scale(var(--scale)) translateY(0px);
         opacity: 1;
     }
 
     .collage-grid {
         display: grid;
-        grid-template-rows: repeat(4, 25vw);
-        grid-template-columns: repeat(4, minmax(0,1fr));
+        grid-template-columns: repeat(8, minmax(0,1fr));
         width: 100vw;
-        overflow-x: hidden;
-        overflow-y: hidden;
+        /* overflow-x: hidden; */
+        /* overflow-y: visible; */
+    }
+    .mobile-spacer {
+        width: 100vw;
+        height: calc(100vw / 8);
     }
     .collage-grid a {
         text-decoration: none;
@@ -42,6 +45,7 @@
 
     .collage-grid img {
         width: 100%;
+        height: auto;
     }
     .mobile-col-start-1 {
         grid-column-start: 1;
@@ -61,16 +65,52 @@
     .mobile-row-start-3 {
         grid-row-start: 3;
     }
+    .mobile-col-start-4 {
+        grid-column-start: 4;
+    }
+    .mobile-row-start-4 {
+        grid-row-start: 4;
+    }
+    .mobile-col-start-5 {
+        grid-column-start: 5;
+    }
+    .mobile-row-start-5 {
+        grid-row-start: 5;
+    }
+    .mobile-col-start-6 {
+        grid-column-start: 6;
+    }
+    .mobile-row-start-6 {
+        grid-row-start: 6;
+    }
+    .mobile-col-start-7 {
+        grid-column-start: 7;
+    }
+    .mobile-row-start-7 {
+        grid-row-start: 7;
+    }
     .mobile-span-1 {
-        width: 25vw;
+        width: 12.5vw;
     }
     .mobile-span-2 {
-        width: 50vw;
+        width: 25vw;
     }
     .mobile-span-3 {
-        width: 75vw;
+        width: 37.5vw;
     }
     .mobile-span-4 {
+        width: 50vw;
+    }
+    .mobile-span-5 {
+        width: 62.5vw;
+    }
+    .mobile-span-6 {
+        width: 75vw;
+    }
+    .mobile-span-7 {
+        width: 87.5vw;
+    }
+    .mobile-span-8 {
         width: 100vw;
     }
 
@@ -94,40 +134,39 @@
     }
     /* Mobile */
     @media screen and (max-width: 749px) {
-
+        .text-block {
+            display: none;
+        }
     }
 
     /* Desktop */
     @media screen and (min-width: 750px) {
+        .mobile-spacer {
+            display: none;
+        }
         .collage-grid.offset-bottom {
-            margin-bottom: -25vw;
+            margin-bottom: -8.33vw;
         }
         /* Unset all mobile classes: */
         .collage-grid.auto-rows-mobile {
             grid-template-rows: unset;
         }
-        .mobile-col-start-1, .mobile-col-start-2, .mobile-col-start-3 {
+        .mobile-col-start-1, .mobile-col-start-2, .mobile-col-start-3,  .mobile-col-start-4,  .mobile-col-start-5,  .mobile-col-start-6,  .mobile-col-start-7 {
             grid-column-start: unset;
         }
-        .mobile-row-start-1, .mobile-row-start-2, .mobile-row-start-3 {
+        .mobile-row-start-1, .mobile-row-start-2, .mobile-row-start-3, .mobile-row-start-4, .mobile-row-start-5, .mobile-row-start-6, .mobile-row-start-7 {
             grid-row-start: unset;
         }
-        .mobile-span-1, .mobile-span-2, .mobile-span-3 {
+        .mobile-span-1, .mobile-span-2, .mobile-span-3, .mobile-span-4, .mobile-span-5, .mobile-span-6, .mobile-span-7, .mobile-span-8 {
             width: unset;
         }
 
         /* Now apply desktop classes */
         .collage-grid, .collage-grid.auto-rows-mobile {
             display: grid;
-            grid-template-rows: repeat(8, 12.5vw);
-            grid-template-columns: repeat(8, minmax(0,1fr));
+            grid-template-rows: repeat(12, calc(100vw / 12));
+            grid-template-columns: repeat(12, minmax(0,1fr));
             width: 100vw;
-        }
-
-        .collage-grid {
-            width: calc(100vw - 2rem);
-            margin: 0 auto;
-            grid-template-rows: repeat(8, calc((100vw - 2rem) / 8));
         }
 
         .desktop-col-start-1 {
@@ -151,6 +190,18 @@
         .desktop-col-start-7 {
             grid-column-start: 7;
         }
+        .desktop-col-start-8 {
+            grid-column-start: 8;
+        }
+        .desktop-col-start-9 {
+            grid-column-start: 9;
+        }
+        .desktop-col-start-10 {
+            grid-column-start: 10;
+        }
+        .desktop-col-start-11 {
+            grid-column-start: 11;
+        }
 
         .desktop-row-start-1 {
             grid-row-start: 1;
@@ -173,45 +224,93 @@
         .desktop-row-start-7 {
             grid-row-start: 7;
         }
+        .desktop-row-start-8 {
+            grid-row-start: 8;
+        }
+        .desktop-row-start-9 {
+            grid-row-start: 9;
+        }
+        .desktop-row-start-10 {
+            grid-row-start: 10;
+        }
+        .desktop-row-start-11 {
+            grid-row-start: 11;
+        }
         .desktop-span-1 {
-            width: 12.5vw;
+            width: calc((100vw / 12));
         }
         .desktop-span-2 {
-            width: 25vw;
+            width: calc((100vw / 12) * 2);
         }
         .desktop-span-3 {
-            width: 37.5vw;
+            width: calc((100vw / 12) * 3);
         }
         .desktop-span-4 {
-            width: 50vw;
+            width: calc((100vw / 12) * 4);
         }
         .desktop-span-5 {
-            width: 62.5vw;
+            width: calc((100vw / 12) * 5);
         }
         .desktop-span-6 {
-            width: 75vw;
+            width: calc((100vw / 12) * 6);
         }
         .desktop-span-7 {
-            width: 87.5vw;
+            width: calc((100vw / 12) * 7);
+        }
+        .desktop-span-8 {
+            width: calc((100vw / 12) * 8);
+        }
+        .desktop-span-9 {
+            width: calc((100vw / 12) * 9);
+        }
+        .desktop-span-10 {
+            width: calc((100vw / 12) * 10);
+        }
+        .desktop-span-11 {
+            width: calc((100vw / 12) * 11);
         }
     }
 {%- endstyle -%}
 
-<div class="collage-grid {% if section.settings.offset_bottom == true %} offset-bottom {% endif %} {% if section.settings.auto_rows_mobile == true %} auto-rows-mobile {% endif %}">
+<div class="collage-grid {% if section.settings.offset_bottom == true %} offset-bottom {% endif %} auto-rows-mobile">
     {% for block in section.blocks %}
-        <div data-entrance="{{ block.settings.entrance-anim }}" style="--rotate: {{ block.settings.rotation }}deg; --scale: {{ block.settings.scale }};" class="{{ block.settings.mobile_col_start }} {{ block.settings.mobile_row_start }} {{ block.settings.mobile_span }} {{ block.settings.desktop_col_start }} {{ block.settings.desktop_row_start }} {{ block.settings.desktop_span }}">
-        {% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
-            {% if block.settings.image != blank %}
-                <img src="{{ block.settings.image |  image_url  }}" alt="">
-            {% endif %}
-            {% if block.settings.link_label != blank %}
-                <p class="link-label">{{ block.settings.link_label }}</p>
-            {% endif %}
-            {% if block.settings.text != blank %}
-                <div class="text-block">{{ block.settings.text }}</div>
-            {% endif %}
-        {% if block.settings.link != blank %}</a>{% endif %}
-        </div>
+        {% case block.type %}
+        {% when "card" %}
+            <div data-entrance="{{ block.settings.entrance-anim }}" style="--rotate: {{ block.settings.rotation }}deg; --scale: {{ block.settings.scale }};" class="{{ block.settings.mobile_col_start }} {{ block.settings.mobile_row_start }} {{ block.settings.mobile_span }} {{ block.settings.desktop_col_start }} {{ block.settings.desktop_row_start }} {{ block.settings.desktop_span }}">
+                {% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
+                    {% if block.settings.image != blank %}
+                        {% comment %} <img src="{{ block.settings.image |  image_url  }}" alt=""> {% endcomment %}
+                        <img
+                        srcset="
+                        {%- if block.settings.image.width >= 375 -%}{{ block.settings.image | image_url: width: 375 }} 375w,{%- endif -%}
+                        {%- if block.settings.image.width >= 750 -%}{{ block.settings.image | image_url: width: 750 }} 750w,{%- endif -%}
+                        {%- if block.settings.image.width >= 1100 -%}{{ block.settings.image | image_url: width: 1100 }} 1100w,{%- endif -%}
+                        {%- if block.settings.image.width >= 1500 -%}{{ block.settings.image | image_url: width: 1500 }} 1500w,{%- endif -%}
+                        {%- if block.settings.image.width >= 1780 -%}{{ block.settings.image | image_url: width: 1780 }} 1780w,{%- endif -%}
+                        {%- if block.settings.image.width >= 2000 -%}{{ block.settings.image | image_url: width: 2000 }} 2000w,{%- endif -%}
+                        {%- if block.settings.image.width >= 3000 -%}{{ block.settings.image | image_url: width: 3000 }} 3000w,{%- endif -%}
+                        {%- if block.settings.image.width >= 3840 -%}{{ block.settings.image | image_url: width: 3840 }} 3840w,{%- endif -%}
+                        {{ block.settings.image | image_url }} {{ block.settings.image.width }}w
+                        "
+                        sizes="100vw"
+                        src="{{ block.settings.image | image_url: width: 1500 }}"
+                        loading="lazy"
+                        alt="{{ block.settings.image.alt | escape }}"
+                        width="{{ block.settings.image.width }}"
+                        height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio }}"
+                    >
+                    {% endif %}
+                    {% if block.settings.link_label != blank %}
+                        <p class="link-label">{{ block.settings.link_label }}</p>
+                    {% endif %}
+                    {% if block.settings.text != blank %}
+                        <div class="text-block">{{ block.settings.text }}</div>
+                    {% endif %}
+                {% if block.settings.link != blank %}</a>{% endif %}
+            </div>
+        {% when "spacer" %}
+            <div class="mobile-spacer {{ block.settings.mobile_row_start }}"></div>
+        {% endcase %}
     {% endfor %}
 </div>
 
@@ -243,10 +342,15 @@
           "label": "t:sections.multicolumn.blocks.column.settings.image.label"
         },
         {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Image alt text"
+        },
+        {
           "type": "richtext",
           "id": "text",
           "default": "<p>Collage grid item</p>",
-          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
+          "label": "Lyric Block"
         },
         {
           "type": "text",
@@ -273,6 +377,22 @@
                 {
                 "value": "mobile-col-start-3",
                 "label": "3"
+                },
+                {
+                "value": "mobile-col-start-4",
+                "label": "4"
+                },
+                {
+                "value": "mobile-col-start-5",
+                "label": "5"
+                },
+                {
+                "value": "mobile-col-start-6",
+                "label": "6"
+                },
+                {
+                "value": "mobile-col-start-7",
+                "label": "7"
                 }
             ],
             "default": "mobile-col-start-1",
@@ -293,6 +413,22 @@
                 {
                 "value": "mobile-row-start-3",
                 "label": "3"
+                },
+                {
+                "value": "mobile-row-start-4",
+                "label": "4"
+                },
+                {
+                "value": "mobile-row-start-5",
+                "label": "5"
+                },
+                {
+                "value": "mobile-row-start-6",
+                "label": "6"
+                },
+                {
+                "value": "mobile-row-start-7",
+                "label": "7"
                 }
             ],
             "default": "mobile-row-start-1",
@@ -317,6 +453,22 @@
                 {
                 "value": "mobile-span-4",
                 "label": "4"
+                },
+                {
+                "value": "mobile-span-5",
+                "label": "5"
+                },
+                {
+                "value": "mobile-span-6",
+                "label": "6"
+                },
+                {
+                "value": "mobile-span-7",
+                "label": "7"
+                },
+                {
+                "value": "mobile-span-8",
+                "label": "8"
                 }
             ],
             "default": "mobile-span-1",
@@ -353,6 +505,22 @@
                 {
                 "value": "desktop-col-start-7",
                 "label": "7"
+                },
+                {
+                "value": "desktop-col-start-8",
+                "label": "8"
+                },
+                {
+                "value": "desktop-col-start-9",
+                "label": "9"
+                },
+                {
+                "value": "desktop-col-start-10",
+                "label": "10"
+                },
+                {
+                "value": "desktop-col-start-11",
+                "label": "11"
                 }
             ],
             "default": "desktop-col-start-1",
@@ -389,6 +557,22 @@
                 {
                 "value": "desktop-row-start-7",
                 "label": "7"
+                },
+                {
+                "value": "desktop-row-start-8",
+                "label": "8"
+                },
+                {
+                "value": "desktop-row-start-9",
+                "label": "9"
+                },
+                {
+                "value": "desktop-row-start-10",
+                "label": "10"
+                },
+                {
+                "value": "desktop-row-start-11",
+                "label": "11"
                 }
             ],
             "default": "desktop-row-start-1",
@@ -425,6 +609,22 @@
                 {
                 "value": "desktop-span-7",
                 "label": "7"
+                },
+                {
+                "value": "desktop-span-8",
+                "label": "8"
+                },
+                {
+                "value": "desktop-span-9",
+                "label": "9"
+                },
+                {
+                "value": "desktop-span-10",
+                "label": "10"
+                },
+                {
+                "value": "desktop-span-11",
+                "label": "11"
                 }
             ],
             "default": "desktop-span-1",
@@ -465,6 +665,48 @@
             "default": 1,
             "label": "Scale",
             "info": "Slightly tweak scale to make gridded elements appear more dynamic."
+        }
+      ]
+    },
+    {
+      "type": "spacer",
+      "name": "Mobile Spacer",
+      "settings": [
+        {
+            "type": "select",
+            "id": "mobile_row_start",
+            "options": [
+                {
+                "value": "mobile-row-start-1",
+                "label": "1"
+                },
+                {
+                "value": "mobile-row-start-2",
+                "label": "2"
+                },
+                {
+                "value": "mobile-row-start-3",
+                "label": "3"
+                },
+                {
+                "value": "mobile-row-start-4",
+                "label": "4"
+                },
+                {
+                "value": "mobile-row-start-5",
+                "label": "5"
+                },
+                {
+                "value": "mobile-row-start-6",
+                "label": "6"
+                },
+                {
+                "value": "mobile-row-start-7",
+                "label": "7"
+                }
+            ],
+            "default": "mobile-row-start-1",
+            "label": "Row Start (mobile)"
         }
       ]
     }

@@ -15,19 +15,131 @@
         "padding_bottom": 36
       }
     },
-    "14c16e31-5809-4109-9aef-97af82afb034": {
+    "132ed1a3-c679-465e-b05a-4c4016f1fcf9": {
       "type": "collage-grid",
       "blocks": {
-        "template--16875833884900__14c16e31-5809-4109-9aef-97af82afb034-card-1": {
+        "template--15143409188952__132ed1a3-c679-465e-b05a-4c4016f1fcf9-card-1": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/laurynhill-webbanner.webp",
+            "image": "shopify:\/\/shop_images\/08965a14b35e2a64e15d4583a9fd9d9f.jpg",
+            "alt_text": "",
             "text": "",
             "link_label": "",
             "link": "",
             "mobile_col_start": "mobile-col-start-1",
             "mobile_row_start": "mobile-row-start-1",
-            "mobile_span": "mobile-span-4",
+            "mobile_span": "mobile-span-8",
+            "desktop_col_start": "desktop-col-start-6",
+            "desktop_row_start": "desktop-row-start-1",
+            "desktop_span": "desktop-span-7",
+            "entrance-anim": "fly",
+            "rotation": 0,
+            "scale": 1
+          }
+        },
+        "812520c4-48c8-4231-8c34-bebd4f11bbc8": {
+          "type": "spacer",
+          "settings": {
+            "mobile_row_start": "mobile-row-start-2"
+          }
+        },
+        "875c03f7-a60e-4391-9f7f-ea101dd9c1c6": {
+          "type": "spacer",
+          "settings": {
+            "mobile_row_start": "mobile-row-start-4"
+          }
+        },
+        "template--15143409188952__132ed1a3-c679-465e-b05a-4c4016f1fcf9-card-2": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_6761_1.png",
+            "alt_text": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-1",
+            "mobile_row_start": "mobile-row-start-3",
+            "mobile_span": "mobile-span-5",
+            "desktop_col_start": "desktop-col-start-2",
+            "desktop_row_start": "desktop-row-start-4",
+            "desktop_span": "desktop-span-3",
+            "entrance-anim": "fly",
+            "rotation": 0,
+            "scale": 1
+          }
+        },
+        "c6504482-096e-49b2-a32a-d925e34be2cb": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/cac9837b220af58aa5c84834ab4b9b29.png",
+            "alt_text": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-2",
+            "mobile_row_start": "mobile-row-start-5",
+            "mobile_span": "mobile-span-6",
+            "desktop_col_start": "desktop-col-start-2",
+            "desktop_row_start": "desktop-row-start-10",
+            "desktop_span": "desktop-span-5",
+            "entrance-anim": "fly",
+            "rotation": -3,
+            "scale": 0.9
+          }
+        },
+        "19c18319-dfaa-4197-bc97-3eeba2cd6182": {
+          "type": "spacer",
+          "settings": {
+            "mobile_row_start": "mobile-row-start-6"
+          }
+        },
+        "d10b9cd4-812b-433b-b873-d6eeb4ef25bc": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/648c1490d1756089b8322c31095c2afe.jpg",
+            "alt_text": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-3",
+            "mobile_row_start": "mobile-row-start-7",
+            "mobile_span": "mobile-span-6",
+            "desktop_col_start": "desktop-col-start-9",
+            "desktop_row_start": "desktop-row-start-9",
+            "desktop_span": "desktop-span-3",
+            "entrance-anim": "fly",
+            "rotation": 0,
+            "scale": 1
+          }
+        }
+      },
+      "block_order": [
+        "template--15143409188952__132ed1a3-c679-465e-b05a-4c4016f1fcf9-card-1",
+        "812520c4-48c8-4231-8c34-bebd4f11bbc8",
+        "875c03f7-a60e-4391-9f7f-ea101dd9c1c6",
+        "template--15143409188952__132ed1a3-c679-465e-b05a-4c4016f1fcf9-card-2",
+        "c6504482-096e-49b2-a32a-d925e34be2cb",
+        "19c18319-dfaa-4197-bc97-3eeba2cd6182",
+        "d10b9cd4-812b-433b-b873-d6eeb4ef25bc"
+      ],
+      "settings": {
+        "offset_bottom": false
+      }
+    },
+    "f4f05520-00b0-4ee9-b135-5f7e720c0c6c": {
+      "type": "collage-grid",
+      "blocks": {
+        "3b3c8073-357a-41af-8da6-2e6fb7f93a31": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/dcdedbdc888a3e5ec933c33dd48342c2.jpg",
+            "alt_text": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-1",
+            "mobile_row_start": "mobile-row-start-2",
+            "mobile_span": "mobile-span-6",
             "desktop_col_start": "desktop-col-start-4",
             "desktop_row_start": "desktop-row-start-2",
             "desktop_span": "desktop-span-5",
@@ -36,142 +148,307 @@
             "scale": 1
           }
         },
-        "346f70a0-4e72-4cab-bff5-4eaf1c83ebc5": {
+        "d7a9d89d-661d-4db3-a5ea-1e26400c2e01": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/6924YL.JP07_frt.png",
+            "image": "shopify:\/\/shop_images\/ee08ee2b1d72d1998cd4c058e510ffb1_868eac4c-0e37-4d2b-be12-baa1affbd7cc.jpg",
+            "alt_text": "",
             "text": "",
-            "link_label": "Shop Tour Merch",
-            "link": "shopify:\/\/collections\/all",
-            "mobile_col_start": "mobile-col-start-2",
-            "mobile_row_start": "mobile-row-start-3",
-            "mobile_span": "mobile-span-3",
-            "desktop_col_start": "desktop-col-start-1",
-            "desktop_row_start": "desktop-row-start-3",
-            "desktop_span": "desktop-span-3",
-            "entrance-anim": "fly",
-            "rotation": -3,
-            "scale": 1
-          }
-        },
-        "5b7aab4f-04ed-44f8-a63b-b1ae0d92c6d0": {
-          "type": "card",
-          "settings": {
-            "text": "<p>It could all be so simple            But you'd rather     make it hard Loving you is like a   battle            And we both end up with scars Tell me,      who I have <\/p><p>to be?      To get some reciprocity See,     no one loves you more     than me  And            no one ever will<\/p>",
             "link_label": "",
             "link": "",
             "mobile_col_start": "mobile-col-start-1",
-            "mobile_row_start": "mobile-row-start-2",
-            "mobile_span": "mobile-span-4",
-            "desktop_col_start": "desktop-col-start-2",
-            "desktop_row_start": "desktop-row-start-1",
-            "desktop_span": "desktop-span-3",
+            "mobile_row_start": "mobile-row-start-4",
+            "mobile_span": "mobile-span-8",
+            "desktop_col_start": "desktop-col-start-1",
+            "desktop_row_start": "desktop-row-start-8",
+            "desktop_span": "desktop-span-5",
             "entrance-anim": "fly",
-            "rotation": 2,
+            "rotation": 0,
             "scale": 1
           }
         },
-        "75126fa5-6a0e-4210-84c8-4ea297714266": {
+        "44e03e2b-e39f-4b61-afba-b460b7ba9561": {
           "type": "card",
           "settings": {
-            "image": "shopify:\/\/shop_images\/FUG-returnofthefugeesls-green-1200x1200-FRONTBACK.png",
+            "image": "shopify:\/\/shop_images\/Group_628_2af5284d-f112-4897-b812-fcce8b8d6613.png",
+            "alt_text": "",
             "text": "",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-1",
+            "mobile_row_start": "mobile-row-start-3",
+            "mobile_span": "mobile-span-8",
+            "desktop_col_start": "desktop-col-start-5",
+            "desktop_row_start": "desktop-row-start-6",
+            "desktop_span": "desktop-span-8",
+            "entrance-anim": "fly",
+            "rotation": 0,
+            "scale": 0.9
+          }
+        },
+        "5551f893-c80d-443e-8457-dd881cedb9c5": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-11-01_at_5.46_2467105b-1bef-4d7a-84f0-ce2ba60add98.png",
+            "alt_text": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-1",
+            "mobile_row_start": "mobile-row-start-6",
+            "mobile_span": "mobile-span-7",
+            "desktop_col_start": "desktop-col-start-8",
+            "desktop_row_start": "desktop-row-start-11",
+            "desktop_span": "desktop-span-3",
+            "entrance-anim": "fly",
+            "rotation": 0,
+            "scale": 0.9
+          }
+        }
+      },
+      "block_order": [
+        "3b3c8073-357a-41af-8da6-2e6fb7f93a31",
+        "d7a9d89d-661d-4db3-a5ea-1e26400c2e01",
+        "44e03e2b-e39f-4b61-afba-b460b7ba9561",
+        "5551f893-c80d-443e-8457-dd881cedb9c5"
+      ],
+      "settings": {
+        "offset_bottom": false
+      }
+    },
+    "81e58197-69dc-40e2-8c8f-1e14aa3337d3": {
+      "type": "collage-grid",
+      "blocks": {
+        "c41d9929-aec8-4e69-8f5e-0e874cd738fe": {
+          "type": "card",
+          "settings": {
+            "alt_text": "",
+            "text": "<p>It could all be so simple<br\/>         But you'd rather<br\/>      make it hard Loving you <\/p><p>is like a    battle<br\/><br\/>   And we both end up with scars Tell me,<br\/>      who I have to be?<br\/>      To get some<br\/><br\/>reciprocity See,<br\/><br\/>no one loves you more       than me <br\/>And<br\/>         no one ever will<br\/><\/p>",
             "link_label": "",
             "link": "",
             "mobile_col_start": "mobile-col-start-1",
             "mobile_row_start": "mobile-row-start-1",
             "mobile_span": "mobile-span-1",
-            "desktop_col_start": "desktop-col-start-4",
-            "desktop_row_start": "desktop-row-start-4",
-            "desktop_span": "desktop-span-5",
-            "entrance-anim": "fly",
-            "rotation": 0,
-            "scale": 1
-          }
-        }
-      },
-      "block_order": [
-        "template--16875833884900__14c16e31-5809-4109-9aef-97af82afb034-card-1",
-        "346f70a0-4e72-4cab-bff5-4eaf1c83ebc5",
-        "5b7aab4f-04ed-44f8-a63b-b1ae0d92c6d0",
-        "75126fa5-6a0e-4210-84c8-4ea297714266"
-      ],
-      "settings": {
-        "auto_rows_mobile": true,
-        "offset_bottom": true
-      }
-    },
-    "c4f5504f-1cb2-4391-a8d8-cb8b1aae4aa1": {
-      "type": "collage-grid",
-      "blocks": {
-        "e98f9124-f19a-4d08-862e-c74ce8fbd88b": {
-          "type": "card",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/laurynhill-webbanner.webp",
-            "text": "",
-            "link_label": "",
-            "link": "",
-            "mobile_col_start": "mobile-col-start-1",
-            "mobile_row_start": "mobile-row-start-1",
-            "mobile_span": "mobile-span-4",
-            "desktop_col_start": "desktop-col-start-4",
-            "desktop_row_start": "desktop-row-start-2",
-            "desktop_span": "desktop-span-5",
-            "entrance-anim": "fly",
-            "rotation": 0,
-            "scale": 1
-          }
-        },
-        "8a0c4d56-652b-4704-8ada-e64dfba08af5": {
-          "type": "card",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/6924YL.JP07_frt.png",
-            "text": "",
-            "link_label": "Shop Tour Merch",
-            "link": "shopify:\/\/collections\/all",
-            "mobile_col_start": "mobile-col-start-2",
-            "mobile_row_start": "mobile-row-start-3",
-            "mobile_span": "mobile-span-3",
-            "desktop_col_start": "desktop-col-start-1",
+            "desktop_col_start": "desktop-col-start-2",
             "desktop_row_start": "desktop-row-start-3",
-            "desktop_span": "desktop-span-3",
+            "desktop_span": "desktop-span-5",
             "entrance-anim": "fly",
             "rotation": -3,
             "scale": 1
           }
         },
-        "81b6a605-7160-45dc-b55c-1260a8512185": {
+        "961aa21a-2c8c-4f86-a8c0-24981289b2b7": {
           "type": "card",
           "settings": {
-            "text": "<p>It could all be so simple            But you'd rather     make it hard Loving you is like a   battle            And we both end up with scars Tell me,      who I have <\/p><p>to be?      To get some reciprocity See,     no one loves you more     than me  And            no one ever will<\/p>",
+            "image": "shopify:\/\/shop_images\/9854c66b372a746e69e324e5e983ceeb.jpg",
+            "alt_text": "",
+            "text": "",
             "link_label": "",
             "link": "",
             "mobile_col_start": "mobile-col-start-1",
-            "mobile_row_start": "mobile-row-start-2",
-            "mobile_span": "mobile-span-4",
-            "desktop_col_start": "desktop-col-start-1",
-            "desktop_row_start": "desktop-row-start-1",
+            "mobile_row_start": "mobile-row-start-1",
+            "mobile_span": "mobile-span-8",
+            "desktop_col_start": "desktop-col-start-7",
+            "desktop_row_start": "desktop-row-start-4",
+            "desktop_span": "desktop-span-6",
+            "entrance-anim": "fly",
+            "rotation": 0,
+            "scale": 1
+          }
+        },
+        "24394efd-daa4-4642-99af-a44aa8899c26": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-11-01_at_5.46_25f9c68f-5259-4fa8-93b0-d4f70ac96e48.png",
+            "alt_text": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-1",
+            "mobile_row_start": "mobile-row-start-6",
+            "mobile_span": "mobile-span-6",
+            "desktop_col_start": "desktop-col-start-2",
+            "desktop_row_start": "desktop-row-start-7",
             "desktop_span": "desktop-span-3",
-            "entrance-anim": "wipe",
-            "rotation": 2,
+            "entrance-anim": "fly",
+            "rotation": 0,
+            "scale": 1
+          }
+        },
+        "5d94b7dd-01c9-4d56-a76a-401ac8da79b7": {
+          "type": "spacer",
+          "settings": {
+            "mobile_row_start": "mobile-row-start-2"
+          }
+        },
+        "b40ee92e-f678-4a63-b942-c8563c1b62da": {
+          "type": "spacer",
+          "settings": {
+            "mobile_row_start": "mobile-row-start-5"
+          }
+        },
+        "9fe13b5f-13de-4e0e-a93d-406278794485": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-11-01_at_5.47.png",
+            "alt_text": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-2",
+            "mobile_row_start": "mobile-row-start-3",
+            "mobile_span": "mobile-span-6",
+            "desktop_col_start": "desktop-col-start-8",
+            "desktop_row_start": "desktop-row-start-10",
+            "desktop_span": "desktop-span-3",
+            "entrance-anim": "fly",
+            "rotation": 0,
             "scale": 1
           }
         }
       },
       "block_order": [
-        "e98f9124-f19a-4d08-862e-c74ce8fbd88b",
-        "8a0c4d56-652b-4704-8ada-e64dfba08af5",
-        "81b6a605-7160-45dc-b55c-1260a8512185"
+        "c41d9929-aec8-4e69-8f5e-0e874cd738fe",
+        "961aa21a-2c8c-4f86-a8c0-24981289b2b7",
+        "24394efd-daa4-4642-99af-a44aa8899c26",
+        "5d94b7dd-01c9-4d56-a76a-401ac8da79b7",
+        "b40ee92e-f678-4a63-b942-c8563c1b62da",
+        "9fe13b5f-13de-4e0e-a93d-406278794485"
       ],
       "settings": {
-        "auto_rows_mobile": true,
+        "offset_bottom": true
+      }
+    },
+    "3a7af15f-c494-4a7a-b429-319ac98b5e68": {
+      "type": "collage-grid",
+      "blocks": {
+        "c878fa47-a0dc-407d-b4c6-73f25dd5f069": {
+          "type": "spacer",
+          "settings": {
+            "mobile_row_start": "mobile-row-start-1"
+          }
+        },
+        "7bab4163-b665-43c7-8252-1a8291c0ea03": {
+          "type": "spacer",
+          "settings": {
+            "mobile_row_start": "mobile-row-start-3"
+          }
+        },
+        "86af8725-211c-4425-bdb3-ec0e17a2367b": {
+          "type": "spacer",
+          "settings": {
+            "mobile_row_start": "mobile-row-start-5"
+          }
+        },
+        "64276c55-1377-4e1c-981e-3f84f790eee3": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/WhatsApp_Image_2023-11-01_at_5.47_8c8a9067-e9b4-4cf2-9d2e-e105240e4879.png",
+            "alt_text": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-3",
+            "mobile_row_start": "mobile-row-start-2",
+            "mobile_span": "mobile-span-6",
+            "desktop_col_start": "desktop-col-start-2",
+            "desktop_row_start": "desktop-row-start-1",
+            "desktop_span": "desktop-span-3",
+            "entrance-anim": "fly",
+            "rotation": 0,
+            "scale": 1
+          }
+        },
+        "73277ed6-ab25-428b-a745-7afa4ffd332e": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/79fd677564089af63e5bda2b30a49d3e.jpg",
+            "alt_text": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-1",
+            "mobile_row_start": "mobile-row-start-4",
+            "mobile_span": "mobile-span-8",
+            "desktop_col_start": "desktop-col-start-3",
+            "desktop_row_start": "desktop-row-start-7",
+            "desktop_span": "desktop-span-4",
+            "entrance-anim": "fly",
+            "rotation": 0,
+            "scale": 1
+          }
+        },
+        "cb1e79c9-27f9-4141-baa1-2568897f6392": {
+          "type": "card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IMG_6733_1.png",
+            "alt_text": "",
+            "text": "",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-1",
+            "mobile_row_start": "mobile-row-start-6",
+            "mobile_span": "mobile-span-6",
+            "desktop_col_start": "desktop-col-start-10",
+            "desktop_row_start": "desktop-row-start-6",
+            "desktop_span": "desktop-span-2",
+            "entrance-anim": "fly",
+            "rotation": 0,
+            "scale": 1
+          }
+        },
+        "9a9f88b5-adbd-4cd7-8be9-52df194c0799": {
+          "type": "card",
+          "settings": {
+            "alt_text": "",
+            "text": "<p>I wrote these words<br\/>         for everyone Who struggles in <br\/>their <br\/>               youth Who won't accept<br\/>deception Instead<br\/>               of what is truth <br\/>It seems we lose the game, Before<br\/>we even<br\/>                  start to play<br\/><br\/>Who made these rules?<br\/><br\/>         We're so confused<br\/>            Easily led astray<br\/>.<br\/>.                 Let me tell ya that<br\/>        Everything       is       everything <br\/>Everything is everything . <br\/>  After winter, <br\/>      must come spring Everything is<br\/>everything   <\/p>",
+            "link_label": "",
+            "link": "",
+            "mobile_col_start": "mobile-col-start-1",
+            "mobile_row_start": "mobile-row-start-1",
+            "mobile_span": "mobile-span-1",
+            "desktop_col_start": "desktop-col-start-7",
+            "desktop_row_start": "desktop-row-start-4",
+            "desktop_span": "desktop-span-5",
+            "entrance-anim": "fly",
+            "rotation": -5,
+            "scale": 1
+          }
+        },
+        "59807f1f-d5de-4263-bfb1-9efef8495f99": {
+          "type": "spacer",
+          "settings": {
+            "mobile_row_start": "mobile-row-start-1"
+          }
+        },
+        "6ed062a7-3e11-4481-8033-72eb4ae9123b": {
+          "type": "spacer",
+          "settings": {
+            "mobile_row_start": "mobile-row-start-7"
+          }
+        }
+      },
+      "block_order": [
+        "c878fa47-a0dc-407d-b4c6-73f25dd5f069",
+        "7bab4163-b665-43c7-8252-1a8291c0ea03",
+        "86af8725-211c-4425-bdb3-ec0e17a2367b",
+        "64276c55-1377-4e1c-981e-3f84f790eee3",
+        "73277ed6-ab25-428b-a745-7afa4ffd332e",
+        "cb1e79c9-27f9-4141-baa1-2568897f6392",
+        "9a9f88b5-adbd-4cd7-8be9-52df194c0799",
+        "59807f1f-d5de-4263-bfb1-9efef8495f99",
+        "6ed062a7-3e11-4481-8033-72eb4ae9123b"
+      ],
+      "settings": {
         "offset_bottom": false
       }
     }
   },
   "order": [
     "f70b17b8-8471-461f-b4a7-5410721c4c17",
-    "14c16e31-5809-4109-9aef-97af82afb034",
-    "c4f5504f-1cb2-4391-a8d8-cb8b1aae4aa1"
+    "132ed1a3-c679-465e-b05a-4c4016f1fcf9",
+    "f4f05520-00b0-4ee9-b135-5f7e720c0c6c",
+    "81e58197-69dc-40e2-8c8f-1e14aa3337d3",
+    "3a7af15f-c494-4a7a-b429-319ac98b5e68"
   ]
 }
