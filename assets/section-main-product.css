@@ -9,6 +9,9 @@
   margin-bottom: 1.5rem;
   margin: 0 3rem;
 }
+.product__title h1 {
+  font-family: 'Marfa-Thin';
+}
 .product__title .installment {
   display: none;
 }
@@ -51,6 +54,9 @@
     padding: 0 8rem 0 0;
   }
 
+  .product__media-container {
+    cursor: url("https://cdn.shopify.com/s/files/1/0557/8027/8360/files/indicator.svg?v=1699197748");
+  }
   .product__media-container .slider-buttons {
     display: none;
   }
@@ -372,7 +378,8 @@ fieldset.product-form__input .form__label {
 .product-tabs h2 {
   text-decoration: underline;
   margin-bottom: 3rem;
-  display: none;
+  font-family: "Marfa-Thin";
+  font-size: 1.2rem;
 }
 .product-tabs .tab-content {
   font-family: "Marfa-Mono";
@@ -584,19 +591,15 @@ a.product__text {
 }
 
 @media screen and (min-width: 750px) {
-  .product--thumbnail .product__media-list,
-  .product--thumbnail_slider .product__media-list {
-    padding-bottom: calc(var(--media-shadow-vertical-offset) * var(--media-shadow-visible));
+  .product__media-list.slider.grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
   }
-
-  .product__media-list {
-    padding-right: calc(var(--media-shadow-horizontal-offset) * var(--media-shadow-visible));
-  }
-
-  .product--thumbnail .product__media-item:not(.is-active),
-  .product--thumbnail_slider .product__media-item:not(.is-active) {
-    display: none;
-  }
+    /* .product--thumbnail .product__media-item:not(.is-active),
+    .product--thumbnail_slider .product__media-item:not(.is-active) {
+      display: none;
+    } */
 
   .product-media-modal__content > .product__media-item--variant.product__media-item--variant {
     display: none;
@@ -655,10 +658,6 @@ a.product__text {
 
 .product__media-video .product__media-icon {
   opacity: 1;
-}
-
-.product__modal-opener--image .product__media-toggle:hover {
-  cursor: zoom-in;
 }
 
 .product__modal-opener:hover .product__media-icon {
@@ -736,7 +735,6 @@ a.product__text {
 
 .product__media-toggle::after {
   content: '';
-  cursor: pointer;
   display: block;
   margin: 0;
   padding: 0;
@@ -865,7 +863,6 @@ a.product__text {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   right: 2rem;
   padding: 1.2rem;
   position: fixed;
@@ -1058,7 +1055,6 @@ a.product__text {
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   position: sticky;
   padding: 1.2rem;
   z-index: 2;
@@ -1173,6 +1169,7 @@ a.product__text {
 
   .thumbnail-list__item.slider__slide {
     width: calc(33% - 0.6rem);
+    cursor: url("https://cdn.shopify.com/s/files/1/0557/8027/8360/files/indicator.svg?v=1699197748");
   }
 }
 
@@ -1226,7 +1223,6 @@ a.product__text {
   width: 100%;
   padding: 0;
   color: rgb(var(--color-base-text));
-  cursor: pointer;
   background-color: transparent;
 }
 
@@ -1243,16 +1239,6 @@ a.product__text {
   border-color: rgb(var(--color-foreground));
 }
 
-.image-magnify-full-size {
-  cursor: zoom-out;
-  z-index: 1;
-  margin: 0;
-  border-radius: calc(var(--media-radius) - var(--media-border-width));
-}
-
-.image-magnify-hover {
-  cursor: zoom-in;
-}
 
 .product__modal-opener--image .product__media-zoom-none,
 .product__media-icon--none {

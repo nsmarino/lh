@@ -316,7 +316,11 @@
   <script src="{{ 'selling-plans.js' | asset_url }}" defer="defer"></script>
   {% comment %}<script src="{{ 'selling-plan-docs.js' | asset_url }}" defer="defer"></script>{% endcomment %}
 </section>
-
+{% style %}
+  .slider__slide, .product .product__media {
+    cursor: url({{ 'indicator.svg' | asset_url }}), auto;
+  }
+{% endstyle %}
 {% schema %}
 {
   "name": "t:sections.main-product.name",

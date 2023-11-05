@@ -574,42 +574,50 @@ customElements.define('deferred-media', DeferredMedia);
 class SliderComponent extends HTMLElement {
   constructor() {
     super();
-    console.log("SLIDER")
     this.slider = this.querySelector('[id^="Slider-"]');
     this.sliderItems = this.querySelectorAll('[id^="Slide-"]');
+    this.sliderImgs = this.querySelectorAll('[id^="Slide-"] img');
     this.enableSliderLooping = false;
     this.currentPageElement = this.querySelector('.slider-counter--current');
     this.pageTotalElement = this.querySelector('.slider-counter--total');
     this.prevButton = this.querySelector('button[name="previous"]');
     this.nextButton = this.querySelector('button[name="next"]');
 
-    console.log("Here is slider", this.slider)
     if (!this.slider || !this.nextButton) return;
-    console.log("Slider has init")
 
     this.initPages();
     const resizeObserver = new ResizeObserver(entries => this.initPages());
     resizeObserver.observe(this.slider);
 
     this.slider.addEventListener('scroll', this.update.bind(this));
-    this.prevButton.addEventListener('click', this.onButtonClick.bind(this));
-    this.nextButton.addEventListener('click', this.onButtonClick.bind(this));
+
+    this.prevButton.addEventListener('click', (e) => {
+      const sliders = this.closest("section").querySelectorAll("slider-component")
+      sliders.forEach(slider => slider.onButtonClick(e))
+    })
+    this.nextButton.addEventListener('click', (e) => {
+      const sliders = this.closest("section").querySelectorAll("slider-component")
+      sliders.forEach(slider => slider.onButtonClick(e))
+    })
+
+    if (window.innerWidth > 750) {
+      this.sliderImgs.forEach(img=>{
+        img.addEventListener('click', (e) => {
+          const sliders = this.closest("section").querySelectorAll("slider-component")
+          sliders.forEach(slider => slider.onButtonClick(e))
+        })
+      })
+    }
   }
 
   initPages() {
     this.sliderItemsToShow = Array.from(this.sliderItems).filter(element => element.clientWidth > 0);
     
-    console.log("Calculates how many sliderItems are currently in view", this.sliderItemsToShow)
-      
     if (this.sliderItemsToShow.length < 2) return;
     this.sliderItemOffset = this.sliderItemsToShow[1].offsetLeft - this.sliderItemsToShow[0].offsetLeft;
     this.slidesPerPage = Math.floor((this.slider.clientWidth - this.sliderItemsToShow[0].offsetLeft) / this.sliderItemOffset);
    
-    console.log("Per page", this.slidesPerPage)
-
     this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
-    
-    console.log("total pages", this.totalPages)
     
     this.update();
   }
@@ -664,7 +672,8 @@ class SliderComponent extends HTMLElement {
     const step = event.currentTarget.dataset.step || 1;
     this.slideScrollPosition = event.currentTarget.name !== 'previous' ? this.slider.scrollLeft + (step * this.sliderItemOffset) : this.slider.scrollLeft - (step * this.sliderItemOffset);
     this.slider.scrollTo({
-      left: this.slideScrollPosition
+      left: this.slideScrollPosition,
+      behavior: "smooth"
     });
   }
 }
