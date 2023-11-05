@@ -1,40 +1,26 @@
 {%- style -%}
     [data-entrance="wipe"] {
-        border: 2px solid red;
         opacity: 0;
-        -webkit-mask-image: linear-gradient(-30deg, #0000 66%, #000 75%);
-        -webkit-mask-size: 500%;
+        transform: rotate(var(--rotate)) scale(var(--scale)) translateY(100px);
     }
 
     [data-entrance="fly"] {
-        transform: translateY(80px);
         opacity: 0;
+        transform: rotate(var(--rotate)) scale(var(--scale)) translateY(100px);
     }
 
     [data-entrance="wipe"].active {
-        border: 2px solid yellow;
-        animation-name: text-wipe;
-        animation-duration: 1.2s;
-        animation-timing-function: linear;
-        animation-fill-mode: forwards;
-    }
-    @keyframes text-wipe {
-        0% {
-            opacity: 1;
-            -webkit-mask-position: 100%;
-        }
-
-        100% {
-            opacity: 1;
-            -webkit-mask-position: 0%;
-        }
+        transition: 1s ease all;
+        transform: rotate(var(--rotate)) scale(var(--scale)) translateY(0px);
+        opacity: 1;
     }
 
     [data-entrance="fly"].active {
-        transition: 1.2s ease all;
-        transform: translateY(0px);
+        transition: 1.8s ease all;
+        transform: rotate(var(--rotate)) scale(var(--scale)) translateY(0px);
         opacity: 1;
     }
+
     .collage-grid {
         display: grid;
         grid-template-rows: repeat(4, 25vw);
@@ -53,9 +39,7 @@
     .collage-grid.auto-rows-mobile {
         grid-template-rows: auto;
     }
-    .collage-grid.offset-bottom {
-        margin-bottom: -25vw;
-    }
+
     .collage-grid img {
         width: 100%;
     }
@@ -115,6 +99,9 @@
 
     /* Desktop */
     @media screen and (min-width: 750px) {
+        .collage-grid.offset-bottom {
+            margin-bottom: -25vw;
+        }
         /* Unset all mobile classes: */
         .collage-grid.auto-rows-mobile {
             grid-template-rows: unset;
@@ -212,7 +199,7 @@
 
 <div class="collage-grid {% if section.settings.offset_bottom == true %} offset-bottom {% endif %} {% if section.settings.auto_rows_mobile == true %} auto-rows-mobile {% endif %}">
     {% for block in section.blocks %}
-        <div data-entrance="{{ block.settings.entrance-anim }}" style="transform: rotate({{ block.settings.rotation }}deg) scale({{ block.settings.scale }}{% if block.settings.entrance-anim == "fly" %} translateY(-40px){% endif %});" class="{{ block.settings.mobile_col_start }} {{ block.settings.mobile_row_start }} {{ block.settings.mobile_span }} {{ block.settings.desktop_col_start }} {{ block.settings.desktop_row_start }} {{ block.settings.desktop_span }}">
+        <div data-entrance="{{ block.settings.entrance-anim }}" style="--rotate: {{ block.settings.rotation }}deg; --scale: {{ block.settings.scale }};" class="{{ block.settings.mobile_col_start }} {{ block.settings.mobile_row_start }} {{ block.settings.mobile_span }} {{ block.settings.desktop_col_start }} {{ block.settings.desktop_row_start }} {{ block.settings.desktop_span }}">
         {% if block.settings.link != blank %}<a href="{{ block.settings.link }}">{% endif %}
             {% if block.settings.image != blank %}
                 <img src="{{ block.settings.image |  image_url  }}" alt="">
@@ -239,17 +226,10 @@
   "settings": [
     {
       "type": "checkbox",
-      "id": "auto_rows_mobile",
-      "default": false,
-      "label": "Auto Rows Mobile",
-      "info": "Toggle to size row height to content on mobile"
-    },
-    {
-      "type": "checkbox",
       "id": "offset_bottom",
       "default": false,
-      "label": "Offset Bottom",
-      "info": "Toggle to blend together different Collage Grid sections"
+      "label": "Desktop Offset",
+      "info": "Used to blend together different Collage Grid sections"
     }
   ],
   "blocks": [
@@ -456,11 +436,11 @@
             "options": [
                 {
                 "value": "fly",
-                "label": "Fly"
+                "label": "Slow Fly"
                 },
                 {
                 "value": "wipe",
-                "label": "Wipe"
+                "label": "Fast Fly"
                 }
             ],
             "default": "fly",

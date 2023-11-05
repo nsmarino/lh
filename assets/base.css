@@ -370,13 +370,11 @@ h5,
   }
 }
 
-.h0 {
-  font-size: calc(var(--font-heading-scale) * 4rem);
-}
 
 @media only screen and (min-width: 750px) {
   .h0 {
-    font-size: calc(var(--font-heading-scale) * 5.2rem);
+    font-size: 4.4rem;
+    font-family: "Marfa-Thin";
   }
 }
 
@@ -524,6 +522,11 @@ table:not([class]) th {
 @media screen and (max-width: 749px) {
   .small-hide {
     display: none !important;
+  }
+  .h0 {
+    font-size: 2rem;
+    font-family: "Marfa-Thin";
+    line-height: 2.8rem;
   }
 }
 

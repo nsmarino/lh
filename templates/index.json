@@ -66,7 +66,7 @@
             "desktop_col_start": "desktop-col-start-2",
             "desktop_row_start": "desktop-row-start-1",
             "desktop_span": "desktop-span-3",
-            "entrance-anim": "wipe",
+            "entrance-anim": "fly",
             "rotation": 2,
             "scale": 1
           }
